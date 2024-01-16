@@ -80,21 +80,43 @@ function clearGallery(){
     page_num=1;
 }
 
+// function displayImages(response) {
+//     // response.photos.forEach((image) => {
+//     //     const photo=document.createElement("div");
+//     //     photo.innerHTML=`<img src=${image.src.large}>`;
+//     //     document.querySelector(".display_images").appendChild(photo);
+//     // });
+//     const displayContainer = document.querySelector(".display_images");
+
+//     response.photos.forEach((image) => {
+//         const photo = document.createElement("div");
+//         const imageElement = document.createElement("img");
+//         const imageDownloadBtn = document.createElement("button");
+
+//         imageElement.src = image.src.large;
+//         imageDownloadBtn.textContent = 'DOWNLOAD'
+//         imageDownloadBtn.addEventListener('click', () => downloadImage(image.src.original, 'image.jpg'));
+
+//         photo.appendChild(imageElement);
+//         photo.appendChild(imageDownloadBtn);
+//         displayContainer.appendChild(photo);
+//     });
+// }
+
 function displayImages(response) {
-    // response.photos.forEach((image) => {
-    //     const photo=document.createElement("div");
-    //     photo.innerHTML=`<img src=${image.src.large}>`;
-    //     document.querySelector(".display_images").appendChild(photo);
-    // });
     const displayContainer = document.querySelector(".display_images");
 
-    response.photos.forEach((image) => {
+    // Shuffle the array of photos randomly
+    const shuffledPhotos = shuffleArray(response.photos);
+
+    shuffledPhotos.forEach((image) => {
         const photo = document.createElement("div");
         const imageElement = document.createElement("img");
         const imageDownloadBtn = document.createElement("button");
 
         imageElement.src = image.src.large;
         imageDownloadBtn.textContent = 'DOWNLOAD'
+        imageDownloadBtn.classList.add('imageDownloadBtn')
         imageDownloadBtn.addEventListener('click', () => downloadImage(image.src.original, 'image.jpg'));
 
         photo.appendChild(imageElement);
@@ -102,6 +124,20 @@ function displayImages(response) {
         displayContainer.appendChild(photo);
     });
 }
+
+function shuffleArray(array) {
+    // Create a copy of the array to avoid modifying the original array
+    const shuffledArray = array.slice();
+  
+    // Fisher-Yates (Knuth) shuffle algorithm
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+
+    return shuffledArray;
+}
+
 
 function downloadImage(url, filename) {
     fetch(url)

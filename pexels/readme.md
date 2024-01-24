@@ -1,1 +1,0 @@
-add api key in script.js

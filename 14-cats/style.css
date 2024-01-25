@@ -1,0 +1,30 @@
+body {
+    background: rgb(17, 17, 17);
+  }
+
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .header-content {
+    text-align: center;
+  }
+  
+  .btn {
+    background: transparent;
+    border: none;
+    background-color: #62d316;
+    color: #181717;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  img {
+    border-radius: 50px;
+    height: 80%;
+  }
+  

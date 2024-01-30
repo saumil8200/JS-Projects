@@ -22,9 +22,9 @@ function getDate() {
       hoursAdjusted = hoursAdjusted.toString().padStart(2, '0');
 
     const dateString = `${dayOfWeek}, ${dayOfMonth} ${month} ${year}`;  
-    const timeString = `${hoursAdjusted}:${minutes}:${seconds} ${period}`;
+    const timeString = `${hoursAdjusted}:${minutes}:${seconds} <span class="period">${period}</span>`;
 
-    document.getElementById('clock').innerHTML = `${dateString}<br>${timeString}`;
+    document.getElementById('clock').innerHTML = `<div class="date">${dateString}</div><div class="time">${timeString}</div>`;
 }
 
 setInterval(getDate, 1000);

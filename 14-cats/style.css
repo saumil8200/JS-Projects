@@ -1,30 +1,43 @@
-body {
-    background: rgb(17, 17, 17);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-  .container {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  
-  .header-content {
-    text-align: center;
-  }
-  
-  .btn {
-    background: transparent;
-    border: none;
-    background-color: #62d316;
-    color: #181717;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  img {
-    border-radius: 50px;
-    height: 80%;
-  }
-  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.content img {
+  object-fit: cover;
+  margin: 10px;
+  height: 300px;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+button {
+  padding: 0.6rem;
+  border: none;
+  background-color: #FFF;
+  color: #333;
+  border-radius: 20px;
+  margin: 2rem;
+}

@@ -7,6 +7,12 @@ function getRandomImageURL() {
 const button = document.getElementById('generateButton');
 const contentDiv = document.querySelector('.content');
 
+window.addEventListener('load', async function () {
+  const img = document.createElement('img');
+  img.src = getRandomImageURL();
+  contentDiv.appendChild(img);
+});
+
 button.addEventListener('click', function addRandomImage() {
   const img = document.createElement('img');
   img.src = getRandomImageURL();

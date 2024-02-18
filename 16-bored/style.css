@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #333;
+    background-color: #F9F9F9;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+/* .btn-category {
+    background-color: #0C356A;
+    color: #FFF;
+    padding: 1rem;
+}
+
+.btn-category:hover {
+    background-color: #0c356ac7;
+    color: #FFF;
+} */
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.btn-category {
+    /* width: 95px; */
+    height: 45px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    /* border-radius: 45px; */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .btn-category:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+.activity {
+    text-align: center;
+    /* text-transform: uppercase; */
+    /* background-color: #FFF; */
+    color: #333;
+    /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+    /* border-radius: 45px; */
+    margin: 3rem;
+    padding: 5rem;
+    /* font-size: larger; */
+    font-weight: 800;
+    /* transition: all 0.3s ease 0s; */
+    /* letter-spacing: 2.5px; */
+}

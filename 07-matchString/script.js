@@ -1,14 +1,34 @@
-const actualValue = document.querySelector('.actual-string').textContent;
-console.log(actualValue);
 const btn = document.querySelector('.shuffle');
 const shuffleValue = document.querySelector('.shuffle-values')
 const result = document.querySelector('.result')
 
-let arr = [];
+btn.addEventListener('click', function() {
+  const inputString = document.querySelector('.input-string').value.trim();
 
-for (let i = 0; i < actualValue.length; i++) {
-  arr.push(actualValue[i]);
-}
+  if (inputString === '') {
+    alert('Please enter a string');
+    return;
+  }
+
+  let arr = [];
+
+  for (let i = 0; i < inputString.length; i++) {
+    arr.push(inputString[i]);
+  }
+
+  shuffleArray(arr);
+
+  // Convert the shuffled array back to a string
+  const shuffledString = arr.join('');
+
+  shuffleValue.innerHTML = shuffledString;
+
+  if (shuffledString === inputString) {
+    result.textContent = "Matched"
+  } else {
+    result.textContent = "Not Matched"
+  }
+});
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -16,25 +36,3 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
-btn.addEventListener('click', function() {
-  shuffleArray(arr);
-
-  // Convert the shuffled array back to a string
-  const shuffledString = arr.join('');
-
-  shuffleValue.innerHTML = shuffledString;
-  console.log('Shuffled String:', shuffledString);
-
-  if (shuffledString === actualValue) {
-    result.textContent = "Matched"
-  } else {
-    result.textContent = "Not Matched"
-  }
-
-  // if (shuffledString === actualValue) {
-  //   alert('Matched!');
-  // } else {
-  //   alert('Not matched!');
-  // }
-});

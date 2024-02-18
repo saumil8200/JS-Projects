@@ -1,0 +1,102 @@
+[
+  {
+    "name": "01 - Color Changer",
+    "description": "This website features a color changer application that allows users to dynamically change the background color with a simple click of a button.",
+    "link": "./01-colorChanger/index.html"
+  },
+  {
+    "name": "02 - BMI Generator",
+    "description": "This website hosts a BMI (Body Mass Index) calculator tool, enabling users to calculate their BMI based on their height and weight inputs. It provides a straightforward interface for users to input their data and receive their BMI calculation instantly.",
+    "link": "./02-bmiCalculator/index.html"
+  },
+  {
+    "name": "03 - Digital Clock",
+    "description": "This website features a simple digital clock, displaying the current time accurately. With its minimalist design, users can easily glance at the webpage to check the time in a clear and concise format.",
+    "link": "./03-digitalClock/index.html"
+  },
+  {
+    "name": "04 - Stopwatch",
+    "description": "This website has a stopwatch that helps you measure time. You can start, stop, and reset it easily. It's handy for timing activities or events accurately.",
+    "link": "./04-stopWatch/index.html"
+  },
+  {
+    "name": "05 - Keyboard Check",
+    "description": "This website displays the event key codes corresponding to the keys you press on your keyboard.",
+    "link": "./05-keyboard/index.html"
+  },
+  {
+    "name": "06 - Unlimited Colors",
+    "description": "This website automatically changes the background color every second, Simply start the webpage, and watch as the colors continuously cycle.",
+    "link": "./06-unlimitedColors/index.html"
+  },
+  {
+    "name": "07 - Match String",
+    "description": "This web app lets you input a string, shuffle its characters randomly, and see if the shuffled string matches the original.",
+    "link": "./07-matchString/index.html"
+  },
+  {
+    "name": "08 - Your Typer Library",
+    "description": "This website simulates the effect of typing text on a typewriter.",
+    "link": "./08-typer/index.html"
+  },
+  {
+    "name": "09 - Mouse Circle",
+    "description": "This website changes the color of the cursor based on predefined colors in an array as the cursor moves around the screen.",
+    "link": "./09-mouseCircle/index.html"
+  },
+  {
+    "name": "10 - Emoji",
+    "description": "This website allows users to hover their mouse over emojis to display a new emoji. When the mouse moves away, the emoji turns into grayscale.",
+    "link": "./10-emoji/index.html"
+  },
+  {
+    "name": "11 - Jokes",
+    "description": "Have a laugh with some jokes.",
+    "link": "./11-jokes/index.html"
+  },
+  {
+    "name": "12 - Random Image",
+    "description": "This website provides a feed of random images, offering an unpredictable and diverse visual experience with each visit.",
+    "link": "./12-radnomImage/index.html"
+  },
+  {
+    "name": "13 - Rock Paper Scissors",
+    "description": "Play the classic game of Rock Paper Scissors.",
+    "link": "./13-rock_paper_scissor/index.html"
+  },
+  {
+    "name": "14 - Cats",
+    "description": "This website utilizes an API to provide a feed of cat images,",
+    "link": "./14-cats/index.html"
+  },
+  {
+    "name": "15 - DOM Crud",
+    "description": "Perform CRUD operations on the DOM.",
+    "link": "./15-crudDom/index.html"
+  },
+  {
+    "name": "16 - Bored?",
+    "description": "Find activities to cure boredom.",
+    "link": "./16-bored/index.html"
+  },
+  {
+    "name": "17 - Notes",
+    "description": "Take and manage notes.",
+    "link": "./17-notes/index.html"
+  },
+  {
+    "name": "18 - Countries",
+    "description": "This website leverages an API to provide information about different countries, allowing users to explore and learn more about various nations around the world.",
+    "link": "./18-countries/index.html"
+  },
+  {
+    "name": "19 - Songs",
+    "description": "This website utilizes an unofficial JioSaavn API (https://github.com/sumitkolhe/jiosaavn-api) to enable users to search for, play, pause, and download songs. ",
+    "link": "./19-songs/index.html"
+  },
+  {
+    "name": "20 - Pexels",
+    "description": "This client application is built using the Pexels API, allowing users to fetch and search for images from the Pexels platform.",
+    "link": "https://github.com/saumil8200/Web-Dev-Projects/tree/main/20-pexels"
+  }
+]

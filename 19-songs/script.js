@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const query = searchInput.value;
 
         if (query) {
-            const apiUrl = `https://saavn.dev/search/songs?query=${query}`;
+            const apiUrl = `https://saavn.dev/api/search/songs?query=${query}`;
             // const apiUrl = `http://localhost/search/songs?query=${query}`;
 
             fetch(apiUrl)
@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 songElement.innerHTML = `
                     <div class="songs_display">
                         <a href="${song.url}" target="_blank">
-                            <img src="${song.image[1].link}" alt="${song.title} Image">
+                            <img src="${song.image[1].url}" alt="${song.title} Image">
                         </a>
                         <div>
-                            <strong>${song.name}</strong> - ${song.primaryArtists}<br>
+                            <strong>${song.name}</strong> - ${song.artists.primary[0].name}<br>
                         </div>
                         <a href="${song.downloadUrl[4].link}" target="_blank">
                             <button>Download</button>

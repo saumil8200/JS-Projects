@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const query = searchInput.value;
 
         if (query) {
-            const apiUrl = `https://saavn.dev/search/songs?query=${query}`;
+            const apiUrl = `https://saavn.dev/api/search/songs?query=${query}`;
             
             fetch(apiUrl)
                 .then((response) => response.json())
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (songs && songs.length > 0) {
             songs.forEach((song) => {
                 const audioElement = document.createElement("audio");
-                audioElement.src = song.downloadUrl[4].link;
+                audioElement.src = song.downloadUrl[4].url;
 
                 const songElement = document.createElement("div");
                 songElement.className = "song";
@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const songInfo = document.createElement("div");
                 songInfo.className = "songs_display";
                 songInfo.innerHTML = `
-                    <img src="${song.image[1].link}" alt="${song.title}" />
+                    <img src="${song.image[1].url}" alt="${song.title}" />
                     <div>
-                        <strong>${song.name}</strong> - ${song.primaryArtists}<br>
+                        <strong>${song.name}</strong> - ${song.artists.primary[0].name}<br>
                         <span class="timeleft"></span>
                         <a href="${song.downloadUrl[4].link}" target="_blank">
                             <button>Download</button>
